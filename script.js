@@ -1,5 +1,5 @@
 /* ========================================
-   Stat Z Plus – Simple & Clean JS
+   Stat Z Plus – JS Interactions
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Simple counter animation
+  // Counter animation
   const counters = document.querySelectorAll('.count-up');
   const counterObs = new IntersectionObserver(
     (entries) => {
@@ -84,28 +84,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach(c => counterObs.observe(c));
 
-  // Form submit
+  // ===== FORM → WHATSAPP =====
+  const WHATSAPP_NUMBER = '917721922860';
   const form = document.getElementById('contact-form');
+
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      btn.innerHTML = '⏳ Sending...';
-      btn.disabled = true;
 
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const serviceSelect = document.getElementById('service');
+      const service = serviceSelect.options[serviceSelect.selectedIndex].text;
+      const message = document.getElementById('message').value.trim();
+
+      // Build WhatsApp message
+      const whatsappMessage =
+        `*New Enquiry – Stat Z Plus*
+━━━━━━━━━━━━━━━
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone || 'Not provided'}
+*Service:* ${service}
+*Message:* ${message}
+━━━━━━━━━━━━━━━
+_Sent from Stat Z Plus Website_`;
+
+      // Encode and open WhatsApp
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+      // Show sending state
+      const btn = form.querySelector('.form-submit');
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Opening WhatsApp...';
+      btn.style.background = '#25D366';
+      btn.style.color = '#fff';
+
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+
+      // Reset button after 2s
       setTimeout(() => {
-        btn.innerHTML = '✅ Sent Successfully!';
-        btn.style.background = '#10b981';
-        btn.style.color = '#fff';
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Sent! Check WhatsApp';
 
         setTimeout(() => {
           form.reset();
-          btn.innerHTML = '🚀 Send Message';
-          btn.disabled = false;
+          btn.innerHTML = originalHTML;
           btn.style.background = '';
           btn.style.color = '';
         }, 2500);
-      }, 1200);
+      }, 1000);
     });
   }
 });
