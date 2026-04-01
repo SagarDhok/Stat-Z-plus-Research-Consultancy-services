@@ -6,31 +6,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
-                --primary: #1a3576;
-                --primary-dark: #0f2042;
-                --primary-deeper: #0a1628;
-                --primary-light: #3a5faf;
-                --accent: #c8981e;
-                --accent-hover: #daa520;
-                --accent-light: #e8c44a;
+                --primary: #2d3a8c;
+                --primary-dark: #1a1f4e;
+                --primary-deeper: #0e1130;
+                --primary-light: #4f5bbf;
+                --accent: #d4922a;
+                --accent-hover: #e8a533;
+                --accent-light: #f0c060;
                 --white: #ffffff;
-                --gray-50: #f8fafc;
-                --gray-100: #f1f5f9;
-                --gray-200: #e2e8f0;
-                --gray-300: #cbd5e1;
-                --gray-400: #94a3b8;
-                --gray-500: #64748b;
-                --gray-600: #475569;
-                --gray-700: #334155;
-                --gray-800: #1e293b;
-                --gray-900: #0f172a;
-                --success: #059669;
-                --radius: 12px;
-                --radius-sm: 8px;
+                --gray-50: #f7f8fc;
+                --gray-100: #eef0f7;
+                --gray-200: #dde1ee;
+                --gray-300: #c4c9db;
+                --gray-400: #8e95b0;
+                --gray-500: #5f6785;
+                --gray-600: #454c68;
+                --gray-700: #313752;
+                --gray-800: #1f2440;
+                --gray-900: #111430;
+                --success: #0d9467;
+                --radius: 14px;
+                --radius-sm: 10px;
                 --radius-full: 9999px;
-                --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-                --shadow-md: 0 6px 30px rgba(0, 0, 0, 0.08);
-                --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.1);
+                --shadow: 0 4px 24px rgba(17, 20, 48, 0.06);
+                --shadow-md: 0 8px 32px rgba(17, 20, 48, 0.09);
+                --shadow-lg: 0 16px 56px rgba(17, 20, 48, 0.12);
                 --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
                 --font-display: 'Playfair Display', Georgia, serif;
 }
@@ -110,11 +110,11 @@ button {
 }
 
 .navbar.scrolled {
-                background: rgba(10, 22, 40, 0.97);
-                backdrop-filter: blur(16px);
-                -webkit-backdrop-filter: blur(16px);
+                background: rgba(14, 17, 48, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 padding: 10px 0;
-                box-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);
+                box-shadow: 0 4px 30px rgba(14, 17, 48, 0.25);
 }
 
 .navbar .container {
@@ -137,7 +137,7 @@ button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 3px 12px rgba(200, 152, 30, 0.3);
+                box-shadow: 0 3px 16px rgba(212, 146, 42, 0.35);
 }
 
 .brand-logo svg {
@@ -193,11 +193,11 @@ button {
                 color: var(--primary-dark) !important;
                 font-weight: 600 !important;
                 padding: 9px 22px !important;
-                box-shadow: 0 3px 12px rgba(200, 152, 30, 0.25);
+                box-shadow: 0 3px 14px rgba(212, 146, 42, 0.3);
 }
 
 .nav-cta:hover {
-                box-shadow: 0 5px 18px rgba(200, 152, 30, 0.35) !important;
+                box-shadow: 0 5px 22px rgba(212, 146, 42, 0.4) !important;
                 background: linear-gradient(135deg, var(--accent-hover), var(--accent-light)) !important;
 }
 
@@ -231,7 +231,7 @@ button {
 /* ===== HERO ===== */
 .hero {
                 min-height: 100vh;
-                background: linear-gradient(165deg, var(--primary-deeper) 0%, var(--primary-dark) 35%, var(--primary) 70%, var(--primary-light) 100%);
+                background: linear-gradient(160deg, var(--primary-deeper) 0%, var(--primary-dark) 30%, var(--primary) 60%, var(--primary-light) 90%, #6b74d6 100%);
                 display: flex;
                 align-items: center;
                 text-align: center;
@@ -247,7 +247,7 @@ button {
                 right: -25%;
                 width: 70%;
                 height: 120%;
-                background: radial-gradient(ellipse, rgba(200, 152, 30, 0.06) 0%, transparent 65%);
+                background: radial-gradient(ellipse, rgba(212, 146, 42, 0.07) 0%, transparent 65%);
                 pointer-events: none;
 }
 
@@ -261,8 +261,8 @@ button {
                 display: inline-flex;
                 align-items: center;
                 gap: 8px;
-                background: rgba(200, 152, 30, 0.1);
-                border: 1px solid rgba(200, 152, 30, 0.2);
+                background: rgba(212, 146, 42, 0.1);
+                border: 1px solid rgba(212, 146, 42, 0.2);
                 padding: 7px 18px;
                 border-radius: var(--radius-full);
                 font-size: 0.72rem;
@@ -372,7 +372,7 @@ button {
 .btn-primary {
                 background: linear-gradient(135deg, var(--accent), var(--accent-hover));
                 color: var(--primary-dark);
-                box-shadow: 0 4px 16px rgba(200, 152, 30, 0.3);
+                box-shadow: 0 4px 18px rgba(212, 146, 42, 0.35);
 }
 
 .btn-primary svg {
@@ -381,7 +381,7 @@ button {
 
 .btn-primary:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 6px 24px rgba(200, 152, 30, 0.4);
+                box-shadow: 0 8px 28px rgba(212, 146, 42, 0.45);
 }
 
 .btn-secondary {
@@ -501,7 +501,7 @@ button {
                 display: flex;
                 align-items: center;
                 gap: 12px;
-                box-shadow: 0 6px 24px rgba(200, 152, 30, 0.25);
+                box-shadow: 0 6px 28px rgba(212, 146, 42, 0.3);
                 z-index: 2;
 }
 
@@ -807,12 +807,12 @@ button {
 
 /* ===== WHY US ===== */
 .why-us {
-                background: linear-gradient(165deg, var(--primary-deeper), var(--primary-dark) 40%, var(--primary) 80%);
+                background: linear-gradient(160deg, var(--primary-deeper), var(--primary-dark) 35%, var(--primary) 75%, #4a54ad 100%);
                 color: var(--white);
 }
 
 .why-us .section-badge {
-                background: rgba(200, 152, 30, 0.12);
+                background: rgba(212, 146, 42, 0.14);
                 color: var(--accent-light);
 }
 
@@ -846,14 +846,14 @@ button {
 .why-us-card:hover {
                 background: rgba(255, 255, 255, 0.08);
                 transform: translateY(-4px);
-                border-color: rgba(200, 152, 30, 0.2);
+                border-color: rgba(212, 146, 42, 0.25);
 }
 
 .why-us-icon {
                 width: 56px;
                 height: 56px;
                 margin: 0 auto 16px;
-                background: rgba(200, 152, 30, 0.08);
+                background: rgba(212, 146, 42, 0.1);
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
@@ -897,7 +897,7 @@ button {
 }
 
 .contact-info {
-                background: linear-gradient(165deg, var(--primary-deeper), var(--primary-dark) 50%, var(--primary));
+                background: linear-gradient(160deg, var(--primary-deeper), var(--primary-dark) 45%, var(--primary) 90%);
                 border-radius: var(--radius);
                 padding: 40px;
                 color: var(--white);
@@ -912,7 +912,7 @@ button {
                 right: -30%;
                 width: 70%;
                 height: 80%;
-                background: radial-gradient(circle, rgba(200, 152, 30, 0.06) 0%, transparent 60%);
+                background: radial-gradient(circle, rgba(212, 146, 42, 0.08) 0%, transparent 60%);
                 pointer-events: none;
 }
 
@@ -946,7 +946,7 @@ button {
 .contact-item-icon {
                 width: 40px;
                 height: 40px;
-                background: rgba(200, 152, 30, 0.1);
+                background: rgba(212, 146, 42, 0.12);
                 border-radius: 8px;
                 display: flex;
                 align-items: center;
@@ -1107,7 +1107,7 @@ button {
 
 .form-submit:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 6px 24px rgba(200, 152, 30, 0.35);
+                box-shadow: 0 8px 28px rgba(212, 146, 42, 0.4);
 }
 
 /* ===== FOOTER ===== */
@@ -1215,7 +1215,7 @@ button {
                 visibility: hidden;
                 transform: translateY(16px);
                 transition: 0.3s;
-                box-shadow: 0 4px 16px rgba(200, 152, 30, 0.3);
+                box-shadow: 0 4px 18px rgba(212, 146, 42, 0.35);
 }
 
 .scroll-top svg {
