@@ -1161,6 +1161,7 @@ button {
                 display: flex;
                 align-items: center;
                 gap: 6px;
+                white-space: nowrap;
 }
 
 .footer-links a svg {
