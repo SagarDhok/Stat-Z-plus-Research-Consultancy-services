@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   counters.forEach(c => counterObs.observe(c));
 
   // ===== FORM → WHATSAPP =====
-  const WHATSAPP_NUMBER = '919939965108';
+  const WHATSAPP_NUMBER = '917721922860';
   const form = document.getElementById('contact-form');
 
   if (form) {
